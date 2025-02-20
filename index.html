@@ -6,12 +6,105 @@
     <title>Nature's Platter</title>
     <!-- tailwind cdn  -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .sora-font {
+        font-family: "Sora", serif;
+      }
+      .font-color {
+        color: rgba(17, 17, 17, 1);
+      }
+    </style>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+        --color-p: rgba(23, 152, 0, 1);
+        --color-pHex: #179800;
+      }
+    </style>
   </head>
-  <body>
+  <body class="sora-font">
     <!-- header  -->
-    <header>
+    <header class="max-h-screen">
       <!-- nav  -->
-      <nav></nav>
+      <nav class="container mx-auto">
+        <!-- for mobile  -->
+        <div
+          class="lg:hidden flex py-4 border-b border-pHex border-opacity-5 justify-between px-4"
+        >
+          <div>
+            <img src="./assets/logo-header1.png" alt="" />
+          </div>
+          <div>
+            <img src="./assets/icons8-hamburger-menu.svg" alt="" />
+          </div>
+        </div>
+        <!-- for large device  -->
+        <div class="lg:flex hidden justify-between py-6 items-center">
+          <div>
+            <img src="./assets/logo-header.png" alt="" />
+          </div>
+          <div>
+            <ul
+              class="flex justify-between gap-8 font-color text-xl items-center"
+            >
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="flex gap-4 items-center">
+            <p class="">
+              <img width="35" src="./assets/icons8-search.svg" alt="" />
+            </p>
+            <p>
+              <img
+                width="40"
+                height="5r5"
+                src="https://img.icons8.com/carbon-copy/100/shopping-cart.png"
+                alt="shopping-cart"
+              />
+            </p>
+            <div>
+              <button class="rounded-lg border border-p px-7 py-3">
+                Login
+              </button>
+            </div>
+            <div>
+              <button
+                class="rounded-lg border border-p px-7 py-3 text-white bg-p"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- top banner  -->
+      <section class="container mx-auto flex justify-center">
+        <div class="space-y-8">
+          <h1 class="text-5xl font-semibold text-center">
+            Freshness
+            <span class="text-p"
+              >You Can <br />
+              Count</span
+            >
+            On, Prices You’ll Love!
+          </h1>
+          <p class="text-xl text-center">
+            Shop your daily essentials at unbeatable prices. From fresh produce
+            to pantry <br />
+            staples, we’ve got you covered every day!
+          </p>
+          <img class="max-h-screen" src="./assets/hero-vegetables.png" alt="" />
+        </div>
+      </section>
     </header>
     <main></main>
     <footer></footer>
